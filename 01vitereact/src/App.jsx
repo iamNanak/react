@@ -1,10 +1,15 @@
 
+import Myfunc from "./nanak.jsx"
 
 function App() {
-
+const username = 'Nanak'
 
   return (
-    <h1>Hello Nanak | Vite + React</h1>
+    <>
+        <Myfunc />
+    <h1>Hello Nanak | React {username}</h1>   {/* in {} is evaluated expression */}
+    <p>Test Para</p>
+    </>
   )
 }
 

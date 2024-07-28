@@ -13,3 +13,5 @@ const UserContextProvider = ({children}) => {
 
 
 export default UserContextProvider
+
+// here the context is used by funtion or method 'Provider'

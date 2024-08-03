@@ -40,7 +40,8 @@ export class Service{
         return await this.databases.updateDocument(
             config.appwriteDatabaseID,
             config.appwriteCollectionID,
-            slug,{
+            slug,
+            {
                 title,
                 content,
                 featuredImage,

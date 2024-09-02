@@ -4,8 +4,9 @@ import Container from '../components/container/Container'
 import Logo from "./Logo";
 import Logoutbtn from "./Header/Logoutbtn";
 import RTE from "./RTE";
-import Signup from "../pages/Signup";
+import SignupPage from "../pages/SignupPage";
 import Login from "./Login"
+import Signup from "./Signup";
 import PostForm from './post-form/PostForm'
 import PostCard from './PostCard'
 import AuthLayout from "./AuthLayout"
@@ -19,4 +20,4 @@ import Button from "./Button"
 import Input from "./Input"
 import Select from './Select'
 
-export {Header, Footer, Container, Logo, Logoutbtn, RTE, Signup, Login, PostForm, PostCard, AuthLayout, AllPosts, AddPosts, EditPost, Post, Button, Input, Select, Home, LoginPage}
+export {Header, Footer, Container, Logo, Logoutbtn, RTE, SignupPage, Login, Signup, PostForm, PostCard, AuthLayout, AllPosts, AddPosts, EditPost, Post, Button, Input, Select, Home, LoginPage}

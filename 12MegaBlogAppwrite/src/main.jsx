@@ -13,6 +13,7 @@ import {
   Signup,
   Home,
   LoginPage,
+  AddPosts,
 } from "./components/index.js";
 
 const router = createBrowserRouter([
@@ -43,15 +44,26 @@ const router = createBrowserRouter([
       {
         path: "/all-posts",
         element: (
-          <AuthLayout authentication={" "}>
+          <AuthLayout authentication>
+            {" "}
             <AllPosts />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/add-post",
+        element: (
+          <AuthLayout authentication>
+            {" "}
+            <AddPosts />
           </AuthLayout>
         ),
       },
       {
         path: "/edit-post/:slug",
         element: (
-          <AuthLayout authentication={" "}>
+          <AuthLayout authentication>
+            {" "}
             <EditPost />
           </AuthLayout>
         ),

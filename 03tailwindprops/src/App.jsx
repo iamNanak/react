@@ -6,7 +6,7 @@ import './App.css'
 import Card from './components/cards'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   let myObj ={
     username:"Nanak",

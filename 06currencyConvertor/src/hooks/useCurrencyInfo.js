@@ -8,9 +8,9 @@ function useCurrencyInfo(currencyCode) {
     )
       .then((res) => res.json())
       .then((res) => setData(res[currencyCode]));
-    console.log(data);
+    // console.log(data);
   }, [currencyCode]);
-  //   console.log(data);
+  console.log(data);
   return data;
 }
 

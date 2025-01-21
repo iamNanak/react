@@ -1,0 +1,10 @@
+Steps to use Redux and Redux-Toolkit
+
+1. First make the Store - single source of truth
+   use to configure Store import configureStore and make it aware about all the reducer
+
+2. Make the Slice file where reducers(features) are define using createSlice
+   to create slice 3 things are required a. name, b. InitialState c. reducers which take object as key-function pairs
+   In the functions you have access of two things i.e. state and action
+   in state you get - upated state value in the store
+   in action you get - payload (data) \*there are many things you can get from action but payload is imp here

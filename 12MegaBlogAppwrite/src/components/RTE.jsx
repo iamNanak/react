@@ -1,6 +1,7 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { Controller } from "react-hook-form";
+import { ApiKey } from "../config/config";
 
 export default function RTE({ name, control, label, defaultValue = "" }) {
   return (
@@ -12,19 +13,37 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
         control={control}
         render={({ field: { onChange } }) => (
           <Editor
+            apiKey={ApiKey.tinymceAPIKey}
             init={{
               initialValue: defaultValue,
               height: 500,
               menubar: true,
               plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualsblocks code fullscreen",
-                "insertdatetime media table paste code help wordcount",
+                "advlist",
+                "autolink",
+                "link",
+                "image",
+                "lists",
+                "charmap",
+                "preview",
+                "anchor",
+                "pagebreak",
+                "searchreplace",
+                "wordcount",
+                "visualblocks",
+                "visualchars",
+                "code",
+                "fullscreen",
+                "insertdatetime",
+                "media",
+                "table",
+                "emoticons",
+                "help",
               ],
               toolbar:
-                "undo redo | formatselect | bold italic underline | \
-          alignleft aligncenter alignright alignjustify | \
-          bullist numlist outdent indent | removeformat | help",
+                "undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | " +
+                "bullist numlist outdent indent | link image | print preview media fullscreen | " +
+                "forecolor backcolor emoticons | help",
               content_style:
                 "body { font-family:Helvetica,Arial, sans-sherif; font-size:14px }",
             }}

@@ -12,10 +12,10 @@ function PostCard({ $id, title, featured_image }) {
   const userData = useSelector((state) => state.auth.userData);
   const isAuthor = posts && userData ? posts.userId === userData.$id : false;
 
-  console.log("slug", slug);
-  console.log("posts", posts);
-  console.log("isAuthor", isAuthor);
-  console.log("userData", userData);
+  // console.log("slug", slug);
+  // console.log("posts", posts);
+  // console.log("isAuthor", isAuthor);
+  // console.log("userData", userData);
 
   useEffect(() => {
     if (slug) {

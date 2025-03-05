@@ -18,13 +18,13 @@ export default function PostForm({ post }) {
 
   const navigate = useNavigate();
   const userData = useSelector((state) => state.auth.userData);
-  console.log(userData);
+  // console.log(userData);
   const submit = async (data) => {
     if (post) {
       const file = data.image[0]
         ? await appwriteService.uploadFile(data.image[0])
         : null;
-      console.log(file);
+      // console.log(file);
       if (file) {
         appwriteService.deleteFile(post.featured_image);
       }
@@ -47,7 +47,7 @@ export default function PostForm({ post }) {
           ...data,
           userId: userData.$id,
         });
-        console.log("dbPost:", dbPost);
+        // console.log("dbPost:", dbPost);
 
         if (dbPost) {
           navigate(`/post/${dbPost.$id}`);
